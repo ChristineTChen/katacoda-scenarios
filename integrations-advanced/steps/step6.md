@@ -46,4 +46,4 @@ As a result, the `repository_name` parameter for that instance needs to be set.
 
 Add the following code to `github_repo/tests/conftest.py`:
 
-![conftest](https://github.com/DataDog/LearningLabs/blob/master/integrations-advanced/assets/conftest.png)
+![conftest](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/conftest.png)
