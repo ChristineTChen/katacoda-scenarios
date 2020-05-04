@@ -12,13 +12,13 @@ Add the `PyGitHub` dependency to the `github_repo/requirements.in` file.
 
 Add the `github_repo/datadog_checks/github_repo/check.py` file with the following code:
 
-![github_repo.py](../assets/github_repo-1.png)
+![github_repo.py](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/github_repo-1.png)
 
 # Test
 
 Add the `github_repo/tests/test_github_repo.py` file with the following code:
 
-![test_github_repo-1.py](../assets/test_github_repo-1.png)
+![test_github_repo-1.py](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/test_github_repo-1.png)
 
 __NOTES:__
 
