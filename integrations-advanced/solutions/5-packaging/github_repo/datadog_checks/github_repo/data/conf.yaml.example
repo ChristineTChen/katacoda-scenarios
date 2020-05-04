@@ -1,0 +1,13 @@
+init_config:
+
+  ## @param access_token - string - required
+  ## The GitHub access token to authenticate to Github APIs
+  #
+  access_token: <ACCESS_TOKEN>
+
+instances:
+
+    ## @param repository - string - required
+    ## The GitHub Repository name to monitor
+    #
+  - repository_name: <REPOSITORY_NAME>

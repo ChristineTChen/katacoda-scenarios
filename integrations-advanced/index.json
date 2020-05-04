@@ -1,0 +1,88 @@
+{
+  "title": "Build a Datadog Integration: Advanced",
+  "description": "Build a Datadog Integration from scratch - Advanced Workshop DASH 2019",
+  "difficulty": "Advanced",
+  "time": "2 hours",
+  "details": {
+    "steps": [
+      {
+        "title": "Getting Started",
+        "text": "steps/step1.md",
+        "courseData": "scripts/step1.sh"
+      },
+      {
+        "title": "Getting Started - Solution",
+        "text": "steps/step2.md",
+        "courseData": "scripts/step2.sh"
+      },
+      {
+        "title": "Create a New Integration",
+        "text": "steps/step3.md",
+        "courseData": "scripts/step3.sh"
+      },
+      {
+        "title": "Create a New Integration - Solution",
+        "text": "steps/step4.md",
+        "courseData": "scripts/step4.sh"
+      },
+      {
+        "title": "Add Configurations",
+        "text": "steps/step5.md",
+        "courseData": "scripts/step5.sh"
+      },
+      {
+        "title": "Add Configurations - Solution",
+        "text": "steps/step6.md",
+        "courseData": "scripts/step6.sh"
+      },
+      {
+        "title": "Add Service Checks",
+        "text": "steps/step7.md",
+        "courseData": "scripts/step7.sh"
+      },
+      {
+        "title": "Add Service Checks - Solution",
+        "text": "steps/step8.md",
+        "courseData": "scripts/step8.sh"
+      },
+      {
+        "title": "Add Metrics",
+        "text": "steps/step9.md",
+        "courseData": "scripts/step9.sh"
+      },
+      {
+        "title": "Add Metrics - Solution",
+        "text": "steps/step10.md",
+        "courseData": "scripts/step10.sh"
+      },
+      {
+        "title": "Packaging",
+        "text": "steps/step11.md",
+        "courseData": "scripts/step11.sh"
+      },
+      {
+        "title": "Packaging - Solution",
+        "text": "steps/step12.md",
+        "courseData": "scripts/step12.sh"
+      },
+      {
+        "title": "What's Next",
+        "text": "steps/step13.md",
+        "courseData": "scripts/step13.sh"
+      }
+    ],
+    "intro": {
+      "text": "steps/intro.md"
+    },
+    "finish": {
+      "text": "steps/finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/workspace"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
