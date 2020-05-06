@@ -11,7 +11,7 @@ Add the `PyGitHub` dependency to the `github_repo/requirements.in` file.
 # Check
 
 Add the `github_repo/datadog_checks/github_repo/check.py` file with the following code:
-<pre class="file" data-target="clipboard">
+<pre class="file" data-filename="check.py" data-target="clipboard">
 class GithubRepoCheck(AgentCheck):
     def check(self, instance):
         g = Github()
@@ -25,7 +25,7 @@ class GithubRepoCheck(AgentCheck):
 
 Add the `github_repo/tests/test_github_repo.py` file with the following code:
 
-<pre class="file" data-target="clipboard">
+<pre class="file" data-filename="test_github.repo.py" data-target="clipboard">
 def test_check(instance):
     check = GithubRepoCheck('github_repo', {}, {})
     check.check(instance)
