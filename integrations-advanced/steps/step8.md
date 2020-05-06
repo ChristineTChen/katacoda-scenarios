@@ -6,17 +6,17 @@ Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit
 
 In our example, we created the following variable `SERVICE_CHECK_NAME = "github_repo.up"` and we updated the `handle_exception` method:
 
-![github_repo-6](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/github_repo-6.png)
+![github_repo-6](https://github.com/DataDog/LearningLabs/blob/master/integrations-advanced/assets/github_repo-6.png)
 
 Do not forget to also submit the service check when the integration is running correctly.
 
-![github_repo-7](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/github_repo-7.png)
+![github_repo-7](https://github.com/DataDog/LearningLabs/blob/master/integrations-advanced/assets/github_repo-7.png)
 
 # Test
 
 Add the following code to `github_repo/tests/test_github_repo.py`:
 
-![test_github_repo-3](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/test_github_repo-3.png)
+![test_github_repo-3](https://github.com/DataDog/LearningLabs/blob/master/integrations-advanced/assets/test_github_repo-3.png)
 
 __NOTES:__ 
 

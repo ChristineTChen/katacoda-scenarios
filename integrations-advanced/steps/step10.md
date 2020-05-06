@@ -4,7 +4,7 @@
 
 Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit the collected metrics:
 
-![github_repo-8](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/github_repo-8.png)
+![github_repo-8](https://github.com/DataDog/LearningLabs/blob/master/integrations-advanced/assets/github_repo-8.png)
 
 # Test
 
@@ -12,7 +12,7 @@ Create a new Python file called `test_e2e.py` in `github_repo/tests/` in order t
 
 Below is a example of how we mocked `PyGithub` methods to test the integration. There are _many_ different ways to do this—this is just one possibility.
 
-![test_github_repo-4](https://raw.githubusercontent.com/ChristineTChen/katacoda-scenarios/master/integrations-advanced/assets/test_github_repo-4.png)
+![test_github_repo-4](https://github.com/DataDog/LearningLabs/blob/master/integrations-advanced/assets/test_github_repo-4.png)
 
 __NOTES:__
 - Replace `<YOUR_ACCESS_TOKEN>` with your Github Access Token.
