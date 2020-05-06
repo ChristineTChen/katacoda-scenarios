@@ -11,7 +11,7 @@ Add the `PyGitHub` dependency to the `github_repo/requirements.in` file.
 # Check
 
 Add the `github_repo/datadog_checks/github_repo/check.py` file with the following code:
-<pre class="file" data-filename="check.py" data-target="replace">
+<pre class="file" data-target="clipboard">
 class GithubRepoCheck(AgentCheck):
     def check(self, instance):
         g = Github()
@@ -19,25 +19,20 @@ class GithubRepoCheck(AgentCheck):
         repo = g.get_repo("Datadog/integrations-extras")
         self.log.debug('Getting stats for: {}'.format(repo.full_name))
 </pre>
-          
 
-<pre class="file" data-target="clipboard">Test</pre>
-          
-
-<pre class="file" data-target="regex???">Test</pre>
           
 # Test
 
 Add the `github_repo/tests/test_github_repo.py` file with the following code:
 
-```python
+<pre class="file" data-target="clipboard">
 def test_check(instance):
     check = GithubRepoCheck('github_repo', {}, {})
     check.check(instance)
 
     # In order to print debug logs we need to force the test to fail
     assert False
-```
+</pre>
 
 __NOTES:__
 
