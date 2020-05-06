@@ -4,7 +4,7 @@
 
 Add the following content to `github_repo/assets/configuration/spec.yaml`:
 
-```yaml
+<pre class="file" data-target="clipboard">
   - template: init_config
     options:
       - name: access_token
@@ -21,13 +21,11 @@ Add the following content to `github_repo/assets/configuration/spec.yaml`:
           type: string
         description: The Github repository name to monitor.
       - template: instances/default
-```
+</pre>
 
 and sync the configuration file to automatically apply these changes:
 
-```
-ddev validate config --sync
-```
+`ddev validate config --sync`{{execute}}
 
 You should see the `access_token` and `repository` configuration options in `github_repo/datadog_checks/github_repo/data/conf.yaml.example`.
 
@@ -37,7 +35,7 @@ Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file.
 - Add an `__init__` method to retrieve your `access_token` from the `init_config` section of your configuration.
 - Check that the `access_token` is set correctly; otherwise, raise a `ConfigurationError` error.
 
-```python
+<pre class="file" data-target="clipboard">
 class GithubRepoCheck(AgentCheck):
     def __init__(selfself, name, init_config, instances):
         super(GithubRepoCheck, self).__init__(name, init_config, instances)
@@ -46,22 +44,22 @@ class GithubRepoCheck(AgentCheck):
         self.access_token = init_config.get('access_token')
         if not self.access_token:
             raise ConfigurationError('Configuration error, please set an access_token.')
-```
+</pre>
 # Check
 
 Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file. 
 - Similar to what you did with the `__init__` method, fetch and validate the `repository_name` parameter.
 
-```python
+<pre class="file" data-target="clipboard">
 def check(self, instance):
     repository_name = instance.get('repository_name')
     if not repository_name:
         raise ConfigurationError('Configuration error, please set a repository name.')
-```
+</pre>
 
 - Use both parameters in your logic. Catch exceptions that may be raised by the `PyGithub` library.
 
-```python
+<pre class="file" data-target="clipboard">
         # Get repository
         g = Github(self.access_token)
 
@@ -76,20 +74,20 @@ def check(self, instance):
             self.handle_exception("Failed to access repository. Check your repository_name config", e)
         except RateLimitExceededException as e:
             self.handle_exception("Rate limit exceeded. Make sure you provided an access_token", e)
-```
+</pre>
 We created the following method to avoid code duplication:
 
-```python
+<pre class="file" data-target="clipboard">
 def handle_exception(self, msg, e):
     self.warning(msg)
     self.log.debug("{}: {}".format(msg, e))
     raise ConfigurationError(msg)
-```
+</pre>
 # Test
 
 Edit the `github_repo/tests/test_github_repo.py` file with the following code:
 
-```python
+<pre class="file" data-target="clipboard">
 def test_check_invalid_configs(instance):
     # Test missing access_token
     with pytest.raises(ConfigurationError):
@@ -107,7 +105,8 @@ def test_check_invalid_configs(instance):
 
     check = GithubRepoCheck('github_repo', {'access_token': "<YOUR_ACCESS_TOKEN>"}, {})
     check.check(instance)
-```
+</pre>
+
 __NOTES:__ 
 
 - Replace `<YOUR_ACCESS_TOKEN>` with your Github access token.
@@ -117,8 +116,8 @@ As a result, the `repository_name` parameter for that instance needs to be set.
 
 Add the following code to `github_repo/tests/conftest.py`:
 
-```python
+<pre class="file" data-target="clipboard">
 @pytest.fixture
 def instance():
     return {"repository_name": "Datadog/integrations-extras"}
-```
+</pre>
