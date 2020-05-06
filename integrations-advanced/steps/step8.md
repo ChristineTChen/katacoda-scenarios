@@ -2,7 +2,7 @@
 
 # Check
 
-Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit a service check every time you raise an exception or an error.
+Edit the `check.py` file in the `ådatadog_checks/github_repo/` directory and submit a service check every time you raise an exception or an error.
 
 In our example, we created the following variable `SERVICE_CHECK_NAME = "github_repo.up"` and we updated the `handle_exception` method:
 

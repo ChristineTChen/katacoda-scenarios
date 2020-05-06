@@ -31,7 +31,7 @@ You should see the `access_token` and `repository` configuration options in `git
 
 # Init
 
-Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file.  
+Edit the `github_repo/datadog_checks/github_repo/check.py` file.  
 - Add an `__init__` method to retrieve your `access_token` from the `init_config` section of your configuration.
 - Check that the `access_token` is set correctly; otherwise, raise a `ConfigurationError` error.
 
@@ -48,7 +48,7 @@ class GithubRepoCheck(AgentCheck):
 
 # Check
 
-Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file. 
+Edit the `github_repo/datadog_checks/github_repo/check.py` file. 
 - Similar to what you did with the `__init__` method, fetch and validate the `repository_name` parameter.
 
 <pre class="file" data-target="clipboard">

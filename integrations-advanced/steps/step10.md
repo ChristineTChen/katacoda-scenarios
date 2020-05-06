@@ -2,7 +2,7 @@
 
 # Check 
 
-Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit the collected metrics:
+Edit the `check.py` file in the `github_repo/datadog_checks/github_repo/` directory and submit the collected metrics:
 
 <pre class="file" data-target="clipboard">
         try:
