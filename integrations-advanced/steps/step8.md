@@ -6,26 +6,26 @@ Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit
 
 In our example, we created the following variable `SERVICE_CHECK_NAME = "github_repo.up"` and we updated the `handle_exception` method:
 
-```python
+<pre class="file" data-target="clipboard">
 def handle_exception(self, msg, status, tags, e):
     self.warning(msg)
     self.log.debug("{}: {}".format(msg, e))
     self.service_check(self.SERVICE_CHECK_NAME, status, tags=tags)
     raise ConfigurationError(msg)
-```
+</pre>
 
 Do not forget to also submit the service check when the integration is running correctly.
+The `OK` state service check must be submitted at the end of the check run.
 
-```python
-        # NOTE: The OK state service check must be at the end
-        self.service_check(self.SERVICE_CHECK_NAME, AgentCheck.OK, tags=tags)
-```
+<pre class="file" data-target="clipboard">
+self.service_check(self.SERVICE_CHECK_NAME, AgentCheck.OK, tags=tags)
+</pre>
 
 # Test
 
 Add the following code to `github_repo/tests/test_github_repo.py`:
 
-```python
+<pre class="file" data-target="clipboard">
 def test_check_service_checks(instance, aggregator):
     check = GithubRepoCheck('github_repo', {'access_token': "invalid"}, {})
     with pytest.raises(ConfigurationError):
@@ -41,7 +41,7 @@ def test_check_service_checks(instance, aggregator):
     aggregator.assert_service_check(
         GithubRepoCheck.SERVICE_CHECK_NAME, status=check.OK, tags=['repository_name:Datadog/integrations-extras']
     )
-```
+</pre>
 
 __NOTES:__ 
 

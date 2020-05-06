@@ -45,6 +45,7 @@ class GithubRepoCheck(AgentCheck):
         if not self.access_token:
             raise ConfigurationError('Configuration error, please set an access_token.')
 </pre>
+
 # Check
 
 Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file. 
@@ -75,6 +76,7 @@ def check(self, instance):
         except RateLimitExceededException as e:
             self.handle_exception("Rate limit exceeded. Make sure you provided an access_token", e)
 </pre>
+
 We created the following method to avoid code duplication:
 
 <pre class="file" data-target="clipboard">
@@ -83,6 +85,7 @@ def handle_exception(self, msg, e):
     self.log.debug("{}: {}".format(msg, e))
     raise ConfigurationError(msg)
 </pre>
+
 # Test
 
 Edit the `github_repo/tests/test_github_repo.py` file with the following code:
