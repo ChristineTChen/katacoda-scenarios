@@ -1,4 +1,4 @@
-![dd_logo](https://raw.githubusercontent.com/gzussa/katacoda/master/dd-workshop-dash-2019/assets/dd_logo.png)
+![dd_logo](../assets/dd_logo.png)
 
 Welcome to **Build a Datadog Integration (advanced)** workshop.
 
