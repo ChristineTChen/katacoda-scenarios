@@ -4,7 +4,7 @@
 
 Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit the collected metrics:
 
-```python
+<pre class="file" data-target="clipboard">
         try:
             stargazers = repo.get_stargazers().totalCount
             self.gauge('github_repo.stargazers', stargazers, tags=tags)
@@ -19,14 +19,16 @@ Edit the `github_repo/datadog_checks/github_repo/github_repo.py` file and submit
             self.handle_exception(
                 "Rate limit exceeded. Make sure you provided an access_token", AgentCheck.WARNING, tags, e
             )
-```
+</pre>
+
 # Test
 
 Create a new Python file called `test_e2e.py` in `github_repo/tests/` in order to separate the tests.
 
 Below is a example of how we mocked `PyGithub` methods to test the integration. There are _many_ different ways to do this—this is just one possibility.
 
-```python
+
+<pre class="file" data-target="clipboard">
 import mock
 
 from datadog_checks.github_repo import GithubRepoCheck
@@ -69,8 +71,7 @@ def test_check_using_mocks(stargazers_mock, watchers_mock, contributors_mock, su
     aggregator.assert_metric('github_repo.subscribers', value=4.0, tags=['repository_name:Datadog/integrations-extras'])
 
     aggregator.assert_all_metrics_covered()
-
-```
+</pre>
 
 __NOTES:__
 - Replace `<YOUR_ACCESS_TOKEN>` with your Github Access Token.
