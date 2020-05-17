@@ -37,7 +37,7 @@ Edit the `github_repo/datadog_checks/github_repo/check.py` file.
 
 <pre class="file" data-target="clipboard">
 class GithubRepoCheck(AgentCheck):
-    def __init__(selfself, name, init_config, instances):
+    def __init__(self, name, init_config, instances):
         super(GithubRepoCheck, self).__init__(name, init_config, instances)
         
         # Fetch config
@@ -115,6 +115,7 @@ __NOTES:__
 - Replace `<YOUR_ACCESS_TOKEN>` with your Github access token.
 
 We are using the `instance` parameter in the test method `def test_check_invalid_configs(instance):`
+
 As a result, the `repository_name` parameter for that instance needs to be set.
 
 Add the following code to `github_repo/tests/conftest.py`:

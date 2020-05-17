@@ -1,4 +1,4 @@
-Now that we have created the basis for our integration, we are going to add some configuration.
+Now that we have created the basis for our integration, we are going to add some configuration options.
 
 The `/assets/configuration/spec.yaml` of your integration directory contains the integration's specification detailing options that influence behavior.
 
