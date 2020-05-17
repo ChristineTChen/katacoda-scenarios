@@ -8,21 +8,28 @@ Your workspace setup is done! Enjoy the workshop :)
 
 The setup script did the following things for you:
 0. Installed a Python 3.8 base package from a community provider. `pyenv` is the preferred approach for Linux, but can take time to manually compile the release.
-  - `add-apt-repository -y ppa:deadsnakes/ppa`
-  - `apt update`
-  - `apt install -y python3.8 python3.8-venv python3.8-dev`
+  ```
+  add-apt-repository -y ppa:deadsnakes/ppa
+  apt update
+  apt install -y python3.8 python3.8-venv python3.8-dev
+  ```
 
 1. Cloned the community-driven integration repository into the workspace directory.
-  - `git clone -q https://github.com/DataDog/integrations-extras.git /workspace/integration-extras`
+  `git clone -q https://github.com/DataDog/integrations-extras.git /workspace/integration-extras`
 
 2. Set up a Python virtual environment.
-  - `python3.8 -m venv venv`
-  - `source venv/bin/activate`
+   ```
+   python3.8 -m venv venv
+   source venv/bin/activate
+   ```
 
-3. Installed and configureed the Datadog CLI.
-  - `pip install "datadog-checks-dev[cli]"`
-  - `ddev config set extras "/workspace/integrations-extras"`
-  - `ddev config set repo extras`
+3. Installed and configured the Datadog CLI.
+   ```
+   pip install "datadog-checks-dev[cli]"
+   ddev config set extras "/workspace/integrations-extras"
+   ddev config set repo extras
+   ```
+  
 
 # Getting started
 

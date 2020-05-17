@@ -4,21 +4,23 @@
 
 Edit the `check.py` file in the `github_repo/datadog_checks/github_repo/` directory and submit the collected metrics:
 
-<pre class="file" data-target="clipboard">
-        try:
-            stargazers = repo.get_stargazers().totalCount
-            self.gauge('github_repo.stargazers', stargazers, tags=tags)
-            watchers = repo.get_watchers().totalCount
-            self.gauge('github_repo.watchers', watchers, tags=tags)
-            contributors = repo.get_contributors().totalCount
-            self.gauge('github_repo.contributors', contributors, tags=tags)
-            subscribers = repo.get_subscribers().totalCount
-            self.gauge('github_repo.subscribers', subscribers, tags=tags)
+The following should be added the `check()` function.
 
-        except RateLimitExceededException as e:
-            self.handle_exception(
-                "Rate limit exceeded. Make sure you provided an access_token", AgentCheck.WARNING, tags, e
-            )
+<pre class="file" data-target="clipboard">
+try:
+    stargazers = repo.get_stargazers().totalCount
+    self.gauge('github_repo.stargazers', stargazers, tags=tags)
+    watchers = repo.get_watchers().totalCount
+    self.gauge('github_repo.watchers', watchers, tags=tags)
+    contributors = repo.get_contributors().totalCount
+    self.gauge('github_repo.contributors', contributors, tags=tags)
+    subscribers = repo.get_subscribers().totalCount
+    self.gauge('github_repo.subscribers', subscribers, tags=tags)
+
+except RateLimitExceededException as e:
+    self.handle_exception(
+        "Rate limit exceeded. Make sure you provided an access_token", AgentCheck.WARNING, tags, e
+    )
 </pre>
 
 # Test
