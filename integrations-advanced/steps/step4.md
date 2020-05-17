@@ -11,14 +11,14 @@ Add the `PyGitHub` dependency to the `github_repo/requirements.in` file.
 # Check
 
 Add the `github_repo/datadog_checks/github_repo/check.py` file with the following code:
-<pre class="file" data-target="clipboard">
+<pre data-target="clipboard"><code class="python">
 class GithubRepoCheck(AgentCheck):
     def check(self, instance):
         g = Github()
 
         repo = g.get_repo("Datadog/integrations-extras")
         self.log.debug('Getting stats for: {}'.format(repo.full_name))
-</pre>
+</code></pre>
 
           
 # Test

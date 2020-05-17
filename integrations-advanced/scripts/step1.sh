@@ -2,22 +2,26 @@
 
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-echo "Cloning the workshop repository..." | wall -n
-mkdir /workshop && cd /workshop
-git clone -q git@github.com:gzussa/katacoda.git
+mkdir /workshop
+# TODO clone katacoda solutions to `katacoda` directory
 
 echo "Creating workspaces..." | wall -n
 
 mkdir /workspace && cd /workspace
 mkdir /workspace/solution
 
+echo "Installing Python 3.8 community package..." | wall -n
+add-apt-repository -y ppa:deadsnakes/ppa
+apt update
+apt install -y python3.8 python3.8-venv python3.8-dev
+
 echo "Cloning the integrations-extras repository..." | wall -n
-git clone -q git@github.com:DataDog/integrations-extras.git /workspace/integration-extras
+git clone -q https://github.com/DataDog/integrations-extras.git /workspace/integration-extras
 
 echo "Setup a python3 virtual environment..." | wall -n
 cd /workspace/integration-extras
-virtualenv venv -p python3
-source venv/bin/active
+python3.8 -m venv venv
+source venv/bin/activate
 
 echo "Install and configure the datadog-check-dev cli..." | wall -n
 echo "Running \"pip install \"datadog-checks-dev[cli]\"\"" | wall -n
