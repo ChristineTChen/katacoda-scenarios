@@ -2,7 +2,7 @@
 
 # Create the integration 
 
-Run the following command `ddev create "Github Repo"`{{execute}} and provide the requested information.
+Run the following command `ddev create "GitHub Repo"`{{execute}} and provide the requested information.
 
 You should see the following message:
 

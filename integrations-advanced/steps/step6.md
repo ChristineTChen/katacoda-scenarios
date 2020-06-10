@@ -5,7 +5,7 @@
 Add the following content to `github_repo/assets/configuration/spec.yaml`:
 
 <pre class="file" data-target="clipboard">
-name: GitHub Repo
+name: Github Repo
 files:
 - name: github_repo.yaml
   options:  
@@ -15,7 +15,7 @@ files:
         required: true
         value:
           type: string
-        description: The Github access token to authenticate the Github API.
+        description: The GitHub access token to authenticate the Github API.
       - template: init_config/default
   - template: instances
     options:
@@ -23,7 +23,7 @@ files:
         required: true
         value:
           type: string
-        description: The Github repository name to monitor.
+        description: The GitHub repository name to monitor.
       - template: instances/default
 </pre>
 
