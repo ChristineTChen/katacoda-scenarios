@@ -5,6 +5,10 @@
 Add the following content to `github_repo/assets/configuration/spec.yaml`:
 
 <pre class="file" data-target="clipboard">
+name: GitHub Repo
+files:
+- name: github_repo.yaml
+  options:  
   - template: init_config
     options:
       - name: access_token

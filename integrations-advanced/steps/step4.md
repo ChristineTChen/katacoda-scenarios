@@ -70,4 +70,4 @@ __NOTES:__
 - The `test_check` takes a parameter called `instance` as an argument. This parameter is defined in `github_repo/tests/conftest.py`.
 - Don't forget to `import` the Github library!
 
-Use the tooling to run the tests: `ddev test github_repo -dv`{{execute}}.
+Use the tooling to run the tests: `ddev test github_repo:py38 -dv`{{execute}}.
