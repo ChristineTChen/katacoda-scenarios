@@ -62,7 +62,7 @@ def get_subscribers_mock():
 @mock.patch('github.Repository.Repository.get_contributors', side_effect=get_contributors_mock)
 @mock.patch('github.Repository.Repository.get_subscribers', side_effect=get_subscribers_mock)
 def test_check_using_mocks(stargazers_mock, watchers_mock, contributors_mock, subscribers_mock, instance, aggregator):
-    check = GithubRepoCheck('github_repo', {"access_token": "<YOUR_ACCESS_TOKEN>"}, {})
+    check = GithubRepoCheck('github_repo', {"access_token": "YOUR_ACCESS_TOKEN"}, {})
     check.check(instance)
 
     aggregator.assert_metric('github_repo.stargazers', value=1.0, tags=['repository_name:Datadog/integrations-extras'])
@@ -76,7 +76,7 @@ def test_check_using_mocks(stargazers_mock, watchers_mock, contributors_mock, su
 </pre>
 
 __NOTES:__
-- Replace `<YOUR_ACCESS_TOKEN>` with your Github Access Token.
+- Replace `YOUR_ACCESS_TOKEN` with your Github Access Token.
 - The `aggregator` stub is created by default and can be used to assert what is being submitted by the check method.
 - We use the `mock.patch` annotation to mock `PyGithub` methods.
 - We call the `assert_all_metrics_covered()` method to make sure we asserted all the submitted metrics.

@@ -110,13 +110,13 @@ def test_check_invalid_configs(instance):
     with pytest.raises(ConfigurationError):
         check.check({"repository_name": "bar"})
 
-    check = GithubRepoCheck('github_repo', {'access_token': "<YOUR_ACCESS_TOKEN>"}, {})
+    check = GithubRepoCheck('github_repo', {'access_token': "YOUR_ACCESS_TOKEN"}, {})
     check.check(instance)
 </pre>
 
 __NOTES:__ 
 
-- Replace `<YOUR_ACCESS_TOKEN>` with your Github access token.
+- Replace `YOUR_ACCESS_TOKEN` with your Github access token.
 
 We are using the `instance` parameter in the test method `def test_check_invalid_configs(instance):`
 

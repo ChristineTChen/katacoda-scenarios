@@ -1,4 +1,5 @@
-(You can find our completed solution in the `/workspace/solution` folder, as generated from the steps outlined below.)
+(You can find our completed solution in the `integrations-extras` repo)
+
 
 # Check
 
@@ -36,7 +37,7 @@ def test_check_service_checks(instance, aggregator):
     # We need to reset the aggregator between tests
     aggregator.reset()
 
-    check = GithubRepoCheck('github_repo', {'access_token': "<YOUR_ACCESS_TOKEN>"}, {})
+    check = GithubRepoCheck('github_repo', {'access_token': "YOUR_ACCESS_TOKEN"}, {})
     check.check(instance)
     aggregator.assert_service_check(
         GithubRepoCheck.SERVICE_CHECK_NAME, status=check.OK, tags=['repository_name:Datadog/integrations-extras']
@@ -45,6 +46,6 @@ def test_check_service_checks(instance, aggregator):
 
 __NOTES:__ 
 
-- Replace `<YOUR_ACCESS_TOKEN>` with your Github Access Token.
+- Replace `YOUR_ACCESS_TOKEN` with your Github Access Token.
 - The `aggregator` stub is created by default and can be used to assert what is being submitted by the check method. You just need to add it as method parameter—like we did for `instance`.
 

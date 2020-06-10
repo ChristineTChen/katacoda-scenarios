@@ -1,4 +1,4 @@
-(You can find our completed solution in the `/workspace/solution` folder, as generated from the steps outlined below.)
+(You can find our completed solution in the `integrations-extras` repo)
 
 - See the `/workspace/solution/github_repo/manifest.json` file.
 - See the `/workspace/solution/github_repo/metadata.csv` file.
