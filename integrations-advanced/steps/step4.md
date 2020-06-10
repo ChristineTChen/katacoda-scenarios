@@ -45,6 +45,8 @@ Add the following code to `github_repo/datadog_checks/github_repo/check.py` file
 <pre class="file" data-target="clipboard">
 class GithubRepoCheck(AgentCheck):
     def check(self, instance):
+        # type: (Dict[str, Any]) -> None
+
         g = Github()
 
         repo = g.get_repo("Datadog/integrations-extras")
