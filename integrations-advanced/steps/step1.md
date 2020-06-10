@@ -34,11 +34,14 @@ Make sure that your terminal is in the correct folder and that your virtual envi
 Now that you are fully set up, you can start your first assignment.
 
 # Goals
-1. [Create a Github Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
-  - Select scope `repo:public_repo`
+1. Log in to your Datadog account, then install the Agent in the workshop environment.
 
-2. Log in to your Datadog account, then install the Agent in the workshop environment.
   - [Installation Instructions](https://app.datadoghq.com/account/settings#agent/ubuntu)
   - [Check that you can see your instance running](https://app.datadoghq.com/infrastructure)
+
+2. [Create a Github Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
+
+  - For permissions, a minumum of `public_repo` and `repo:status` should be all that's needed.
+
 3. In your terminal, install `PyGithub` via the Python CLI, then write a script to return the `Datadog/integrations-extras` repository name.
 
