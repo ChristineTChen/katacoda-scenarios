@@ -1,6 +1,6 @@
-(You can find our completed solution in the `/workspace/solution` folder, as generated from the steps outlined below.)
+(You can find our completed solution in the `integrations-extras` repo)
 
-# Check
+# Check 
 
 Edit the `check.py` file in the `github_repo/datadog_checks/github_repo/` directory and submit the collected metrics:
 

@@ -1,4 +1,4 @@
-(You can find our completed solution in the `/workspace/solution` folder, as generated from the steps outlined below.)
+(You can find our completed solution in the `integrations-extras` repo)
 
 # Edit the configuration file
 
@@ -31,7 +31,7 @@ You should see the `access_token` and `repository` configuration options in `git
 
 # Init
 
-Edit the `github_repo/datadog_checks/github_repo/check.py` file.
+Edit the `github_repo/datadog_checks/github_repo/check.py` file.  
 - Add an `__init__` method to retrieve your `access_token` from the `init_config` section of your configuration.
 - Check that the `access_token` is set correctly; otherwise, raise a `ConfigurationError` error.
 
@@ -39,7 +39,7 @@ Edit the `github_repo/datadog_checks/github_repo/check.py` file.
 class GithubRepoCheck(AgentCheck):
     def __init__(self, name, init_config, instances):
         super(GithubRepoCheck, self).__init__(name, init_config, instances)
-
+        
         # Fetch config
         self.access_token = init_config.get('access_token')
         if not self.access_token:
@@ -48,7 +48,7 @@ class GithubRepoCheck(AgentCheck):
 
 # Check
 
-Edit the `github_repo/datadog_checks/github_repo/check.py` file.
+Edit the `github_repo/datadog_checks/github_repo/check.py` file. 
 - Similar to what you did with the `__init__` method, fetch and validate the `repository_name` parameter.
 
 <pre class="file" data-target="clipboard">
@@ -110,7 +110,7 @@ def test_check_invalid_configs(instance):
     check.check(instance)
 </pre>
 
-__NOTES:__
+__NOTES:__ 
 
 - Replace `<YOUR_ACCESS_TOKEN>` with your Github access token.
 

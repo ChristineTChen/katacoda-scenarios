@@ -1,10 +1,11 @@
-(You can find our completed solution in the `/workspace/solution` folder, as generated from the steps outlined below.)
+(You can find our completed solution in the `integrations-extras` repo)
 
-# Create the integration
+# Create the integration 
 
 Run the following command `ddev create "Github Repo"`{{execute}} and provide the requested information.
 
 You should see the following message:
+
 ```
 github_repo
 ├── assets
@@ -50,7 +51,7 @@ class GithubRepoCheck(AgentCheck):
         self.log.debug('Getting stats for: {}'.format(repo.full_name))
 </pre>
 
-
+          
 # Test
 
 In order to print debug logs we need to force the test to fail. Add the following code to `github_repo/tests/test_github_repo.py` file:

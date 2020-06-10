@@ -8,7 +8,7 @@ The `/assets/configuration/spec.yaml` of your integration directory contains the
 - Create a `repository_name` configuration parameter in the `instances` section of the integration specification file.
 - Use `ddev validate config --sync` to sync your configuration file.
 - Use both parameters in your `check` function logic.
-- Handle exceptions by raising `ConfigurationError` errors.
+- Handle exceptions by raising `ConfigurationError` errors. 
   - Check that required parameters are set and valid.
 - Create a test to make sure that your code works.
 

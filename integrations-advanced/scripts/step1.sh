@@ -7,7 +7,6 @@ apt update && apt install -y python3.8-dev
 echo "Creating workspaces..." | wall -n
 
 mkdir /workspace && cd /workspace
-mkdir /workspace/solution
 
 echo "Cloning the integrations-extras repository..." | wall -n
 git clone -q https://github.com/DataDog/integrations-extras.git /workspace/integration-extras
