@@ -12,63 +12,51 @@
       },
       {
         "title": "Getting Started - Solution",
-        "text": "steps/step2.md",
-        "courseData": "scripts/step2.sh"
+        "text": "steps/step2.md"
       },
       {
         "title": "Create a New Integration",
-        "text": "steps/step3.md",
-        "courseData": "scripts/step3.sh"
+        "text": "steps/step3.md"
       },
       {
         "title": "Create a New Integration - Solution",
-        "text": "steps/step4.md",
-        "courseData": "scripts/step4.sh"
+        "text": "steps/step4.md"
       },
       {
         "title": "Add Configurations",
-        "text": "steps/step5.md",
-        "courseData": "scripts/step5.sh"
+        "text": "steps/step5.md"
       },
       {
         "title": "Add Configurations - Solution",
-        "text": "steps/step6.md",
-        "courseData": "scripts/step6.sh"
+        "text": "steps/step6.md"
       },
       {
         "title": "Add Service Checks",
-        "text": "steps/step7.md",
-        "courseData": "scripts/step7.sh"
+        "text": "steps/step7.md"
       },
       {
         "title": "Add Service Checks - Solution",
-        "text": "steps/step8.md",
-        "courseData": "scripts/step8.sh"
+        "text": "steps/step8.md"
       },
       {
         "title": "Add Metrics",
-        "text": "steps/step9.md",
-        "courseData": "scripts/step9.sh"
+        "text": "steps/step9.md"
       },
       {
         "title": "Add Metrics - Solution",
-        "text": "steps/step10.md",
-        "courseData": "scripts/step10.sh"
+        "text": "steps/step10.md"
       },
       {
         "title": "Packaging",
-        "text": "steps/step11.md",
-        "courseData": "scripts/step11.sh"
+        "text": "steps/step11.md"
       },
       {
         "title": "Packaging - Solution",
-        "text": "steps/step12.md",
-        "courseData": "scripts/step12.sh"
+        "text": "steps/step12.md"
       },
       {
         "title": "What's Next",
-        "text": "steps/step13.md",
-        "courseData": "scripts/step13.sh"
+        "text": "steps/step13.md"
       }
     ],
     "intro": {
@@ -83,6 +71,6 @@
     "uieditorpath": "/workspace"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "ubuntu1804"
   }
 }

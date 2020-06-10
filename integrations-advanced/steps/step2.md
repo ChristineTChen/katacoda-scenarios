@@ -5,10 +5,11 @@ Then, you can run the following script within the Python REPL to print the repo 
 - `python`{{execute}}
 
 <pre class="file" data-target="clipboard">
-  from github import Github
-  g = Github("<YOUR_ACCESS_TOKEN>>")
-  r = g.get_repo("Datadog/integrations-extras")
-  r.name
+from github import Github
+token = "ACCESS_TOKEN"
+g = Github(token)
+r = g.get_repo("Datadog/integrations-extras")
+r.name
 </pre>
-  
+
 - (Forget how to exit the REPL? Type `exit` for a hint!)

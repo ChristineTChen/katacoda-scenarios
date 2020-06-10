@@ -18,11 +18,11 @@ The `-fs` or `--format-style` flag runs the code style formatter and updates the
 - Validate the manifest:
 
     `ddev validate manifest`{{execute}}
-    
+
 - Validate the metadata:
 
     `ddev validate metadata`{{execute}}
-    
+
 - Validate the service checks:
 
     `ddev validate service-checks`{{execute}}
@@ -32,33 +32,33 @@ The `-fs` or `--format-style` flag runs the code style formatter and updates the
 - Build the wheel:
 
   `ddev -e release build github_repo`{{execute}}
-  
+
 - Install the integration via the Agent:
 
   `sudo -u dd-agent datadog-agent integration install -w github_repo/dist/datadog_github_repo-0.0.1-py2.py3-none-any.whl`{{execute}}
-  
+
 - Create a configuration file for the integration:
 
   `cp /etc/datadog-agent/conf.d/github_repo.d/conf.yaml.example /etc/datadog-agent/conf.d/github_repo.d/conf.yaml`{{execute}}
-  
+
 - Configure your Github access token and repository name to
 
   `vim /etc/datadog-agent/conf.d/github_repo.d/conf.yaml`{{execute}}
-  
+
   - Hint: The `nano` text editor is also available.
-  
+
 - Install the required dependencies into the embedded Python environment of the Agent:
 
   `sudo -u dd-agent /opt/datadog-agent/embedded/bin/pip install -r github_repo/requirements.in --no-cache`{{execute}}
-  
+
 - Restart the Agent in order to activate the integration:
 
   `sudo service datadog-agent restart`{{execute}}
-  
+
 - Verify that the integration is functioning:
 
   `sudo datadog-agent status`{{execute}}
-  
+
 - Examine the status and submitted metrics of the check:
 
   `sudo -u dd-agent -- datadog-agent check github_repo`{{execute}}

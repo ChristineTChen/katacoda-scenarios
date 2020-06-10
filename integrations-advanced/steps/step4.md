@@ -1,8 +1,38 @@
 (You can find our completed solution in the `/workspace/solution` folder, as generated from the steps outlined below.)
 
-# Create the integration 
+# Create the integration
 
 Run the following command `ddev create "Github Repo"`{{execute}} and provide the requested information.
+
+You should see the following message:
+```
+github_repo
+├── assets
+│   └── configuration
+│       └── spec.yaml
+│   └── service_checks.json
+├── datadog_checks
+│   └── github_repo
+│       └── data
+│           └── conf.yaml.example
+│       ├── __about__.py
+│       ├── __init__.py
+│       └── check.py
+│   └── __init__.py
+├── tests
+│   ├── __init__.py
+│   ├── conftest.py
+│   └── test_github_repo.py
+├── CHANGELOG.md
+├── MANIFEST.in
+├── README.md
+├── manifest.json
+├── metadata.csv
+├── requirements-dev.txt
+├── requirements.in
+├── setup.py
+└── tox.ini
+```
 
 # Dependency
 
@@ -20,7 +50,7 @@ class GithubRepoCheck(AgentCheck):
         self.log.debug('Getting stats for: {}'.format(repo.full_name))
 </pre>
 
-          
+
 # Test
 
 In order to print debug logs we need to force the test to fail. Add the following code to `github_repo/tests/test_github_repo.py` file:
